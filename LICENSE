@@ -1,0 +1,103 @@
+MIT License
+
+Copyright (c) 2025 MERO (@QP4RM)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+This software is developed and maintained by MERO. For inquiries, support,
+or contributions, please contact via Telegram: @QP4RM
+
+The PolyglotX library is designed to provide advanced multilingual exception
+handling and translation capabilities for Python applications. It supports
+multiple languages including Arabic, Turkish, Japanese, Chinese, Kurdish,
+Spanish, Hindi, French, Russian, German, and Portuguese.
+
+The library uses multiple translation engines and provides extensive
+customization options for error handling, formatting, and output.
+
+Key Features:
+- Real-time translation of Python exceptions and error messages
+- Support for 11+ languages with native script support
+- Multiple translation engines with automatic fallback
+- Customizable error formatters and output handlers
+- Advanced caching and performance optimization
+- Thread-safe and async-compatible exception handling
+- Extensive decorator and context manager support
+- CLI tools for batch processing and interactive translation
+- Comprehensive logging and monitoring capabilities
+
+This license applies to all components of the PolyglotX library including
+but not limited to core modules, language handlers, translators, formatters,
+utilities, CLI tools, and documentation.
+
+THIRD-PARTY LICENSES:
+This software uses the following third-party libraries, each subject to their
+own licenses:
+- deep-translator: Apache License 2.0
+- translatepy: GNU General Public License v3.0
+- requests: Apache License 2.0
+- colorama: BSD License
+- PyYAML: MIT License
+- click: BSD License
+
+Users are responsible for ensuring compliance with all applicable third-party
+licenses when using or distributing this software.
+
+DISCLAIMER:
+The translation quality depends on the underlying translation services and
+APIs used. The author and contributors make no warranties regarding the
+accuracy, completeness, or reliability of translations provided by this
+software.
+
+Users are advised to review and validate all translations, especially in
+production environments or applications where translation accuracy is critical.
+
+CONTRIBUTIONS:
+Contributions to this project are welcome and appreciated. By contributing
+to this project, you agree to license your contributions under the same MIT
+License terms.
+
+For contribution guidelines, please refer to the CONTRIBUTING.md file in
+the project repository.
+
+SUPPORT:
+For technical support, bug reports, or feature requests, please contact:
+Telegram: @QP4RM
+
+ACKNOWLEDGMENTS:
+Special thanks to the open-source community and the maintainers of the
+translation libraries that make this project possible.
+
+This project is dedicated to making error handling more accessible to
+developers worldwide by breaking down language barriers in software
+development and debugging.
+
+VERSION HISTORY:
+- Version 1.0.0 (2025): Initial release with full multilingual support
+  and comprehensive feature set
+
+FUTURE DEVELOPMENT:
+The PolyglotX library is actively maintained and continuously improved.
+Future versions may include additional languages, enhanced translation
+accuracy, and new features based on community feedback and requirements.
+
+For the latest updates and announcements, follow the project repository
+and contact the author via Telegram: @QP4RM
+
+END OF LICENSE

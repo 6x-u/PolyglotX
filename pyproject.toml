@@ -1,0 +1,23 @@
+[project]
+name = "PolyglotX"
+version = "0.1.0"
+description = "Advanced Multilingual Exception Handler for Python"
+readme = "README.md"  
+requires-python = ">=3.6"
+authors = [
+    { name = "MERO" }
+]
+dependencies = [
+    "click>=8.3.1",
+    "colorama>=0.4.6",
+    "deep-translator>=1.11.4",
+    "googletrans==4.0.0rc1",
+    "pytest>=9.0.1",
+    "pyyaml>=6.0.3",
+    "requests>=2.32.5",
+    "setuptools>=80.9.0",
+    "translatepy>=2.3",
+    "twine>=6.2.0",
+    "wheel>=0.45.1"
+]
+dynamic = ["keywords", "classifiers", "urls", "scripts", "optional-dependencies"]

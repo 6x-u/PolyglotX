@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PolyglotX - Advanced Multilingual Exception Handler for Python. Complete Documentation in 11 Languages.">
+    <meta name="keywords" content="Python, Translation, Exception Handling, Multilingual, Error Messages, i18n">
+    <meta name="author" content="MERO">
+    <title>PolyglotX - Complete Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #e2e8f0;
+            --muted: #94a3b8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --code-bg: #1e293b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            line-height: 1.8;
+        }
+
+        body.rtl {
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        header {
+            background: var(--dark);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary);
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 2px solid var(--primary);
+            color: var(--light);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 25px 50px rgba(99, 102, 241, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+
+        .section {
+            padding: 80px 0;
+            border-top: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subsection-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 40px 0 20px;
+            color: var(--primary);
+        }
+
+        .sub-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 30px 0 15px;
+            color: var(--light);
+        }
+
+        .content {
+            font-size: 18px;
+            line-height: 1.9;
+            margin-bottom: 20px;
+            color: var(--muted);
+        }
+
+        .code-block {
+            background: var(--code-bg);
+            border: 1px solid var(--primary);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 25px 0;
+            overflow-x: auto;
+        }
+
+        pre {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        .code-keyword { color: #c678dd; }
+        .code-string { color: #98c379; }
+        .code-comment { color: #5c6370; }
+        .code-function { color: #61afef; }
+        .code-class { color: #e5c07b; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: rgba(99, 102, 241, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 18px;
+            text-align: left;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        td {
+            color: var(--muted);
+        }
+
+        tr:hover {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: rgba(99, 102, 241, 0.05);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 15px;
+            padding: 35px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--light);
+        }
+
+        .feature-card p {
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        .note {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid var(--warning);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .note-title {
+            font-weight: 700;
+            color: var(--warning);
+            margin-bottom: 10px;
+        }
+
+        .important {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid var(--danger);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .important-title {
+            font-weight: 700;
+            color: var(--danger);
+            margin-bottom: 10px;
+        }
+
+        .success {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--success);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .success-title {
+            font-weight: 700;
+            color: var(--success);
+            margin-bottom: 10px;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 30px;
+            color: var(--muted);
+        }
+
+        li {
+            margin: 12px 0;
+            line-height: 1.7;
+        }
+
+        .toc {
+            background: rgba(99, 102, 241, 0.05);
+            border: 2px solid var(--primary);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .toc h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .toc ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .toc li {
+            margin: 10px 0;
+        }
+
+        .toc a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        .toc a:hover {
+            color: var(--primary);
+        }
+
+        footer {
+            background: var(--darker);
+            padding: 60px 0 30px;
+            border-top: 2px solid var(--primary);
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .section-title { font-size: 32px; }
+            .subsection-title { font-size: 24px; }
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">PolyglotX</div>
+                <div class="language-switcher">
+                    <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+                    <button class="lang-btn" onclick="switchLanguage('ar')">العربية</button>
+                    <button class="lang-btn" onclick="switchLanguage('tr')">Türkçe</button>
+                    <button class="lang-btn" onclick="switchLanguage('ja')">日本語</button>
+                    <button class="lang-btn" onclick="switchLanguage('zh')">中文</button>
+                    <button class="lang-btn" onclick="switchLanguage('ku')">کوردی</button>
+                    <button class="lang-btn" onclick="switchLanguage('es')">Español</button>
+                    <button class="lang-btn" onclick="switchLanguage('hi')">हिन्दी</button>
+                    <button class="lang-btn" onclick="switchLanguage('fr')">Français</button>
+                    <button class="lang-btn" onclick="switchLanguage('ru')">Русский</button>
+                    <button class="lang-btn" onclick="switchLanguage('de')">Deutsch</button>
+                    <button class="lang-btn" onclick="switchLanguage('pt')">Português</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="lang-en" class="lang-content active">
+        <section class="hero">
+            <div class="container">
+                <h1>PolyglotX</h1>
+                <p>Advanced Multilingual Exception Handler for Python</p>
+                <img src="img/hero.png" alt="PolyglotX Banner" class="hero-image">
+                <p>Complete documentation for translating Python errors into 11+ languages in real-time</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#installation">1. Installation</a></li>
+                    <li><a href="#quick-start">2. Quick Start Guide</a></li>
+                    <li><a href="#core-classes">3. Core Classes and Functions</a></li>
+                    <li><a href="#exception-handlers">4. Exception Handlers</a></li>
+                    <li><a href="#translators">5. Translation System</a></li>
+                    <li><a href="#formatters">6. Error Formatters</a></li>
+                    <li><a href="#output-handlers">7. Output Handlers</a></li>
+                    <li><a href="#decorators">8. Decorators</a></li>
+                    <li><a href="#utilities">9. Utility Functions</a></li>
+                    <li><a href="#cli-tools">10. Command Line Tools</a></li>
+                    <li><a href="#advanced-usage">11. Advanced Usage Examples</a></li>
+                    <li><a href="#languages">12. Supported Languages</a></li>
+                    <li><a href="#configuration">13. Configuration Options</a></li>
+                    <li><a href="#best-practices">14. Best Practices</a></li>
+                    <li><a href="#troubleshooting">15. Troubleshooting</a></li>
+                </ul>
+            </div>
+
+            <section id="installation" class="section">
+                <h2 class="section-title">Installation</h2>
+                
+                <h3 class="subsection-title">From PyPI (Recommended)</h3>
+                <div class="code-block">
+<pre><code>pip install PolyglotX</code></pre>
+                </div>
+
+                <h3 class="subsection-title">From GitHub Source</h3>
+                <div class="code-block">
+<pre><code>git clone https://github.com/6x-u/polyglotx.git
+cd polyglotx
+pip install -e .</code></pre>
+                </div>
+
+                <h3 class="subsection-title">System Requirements</h3>
+                <ul>
+                    <li>Python 3.6 or higher</li>
+                    <li>Internet connection for translation services</li>
+                    <li>Minimum 512MB RAM</li>
+                    <li>Works on Windows, macOS, Linux</li>
+                </ul>
+
+                <h3 class="subsection-title">Dependencies</h3>
+                <p class="content">PolyglotX automatically installs the following dependencies:</p>
+                <ul>
+                    <li>deep-translator >= 1.11.0</li>
+                    <li>translatepy >= 2.3</li>
+                    <li>requests >= 2.25.0</li>
+                    <li>colorama >= 0.4.0</li>
+                    <li>pyyaml >= 5.4.0</li>
+                    <li>click >= 8.0.0</li>
+                </ul>
+            </section>
+
+            <section id="quick-start" class="section">
+                <h2 class="section-title">Quick Start Guide</h2>
+
+                <h3 class="subsection-title">Basic Usage - Language Specific Imports</h3>
+                
+                <h4 class="sub-title">Arabic Example</h4>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX <span class="code-keyword">import</span> arbe
+
+<span class="code-comment"># This will automatically catch and translate errors to Arabic</span>
+x = undefined_variable
+
+<span class="code-comment"># Output:</span>
+<span class="code-comment"># خطأ في الاسم: name 'undefined_variable' is not defined</span>
+<span class="code-comment"># MERO tele QP4RM</span></code></pre>
+                </div>
+
+                <h4 class="sub-title">Turkish Example</h4>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX <span class="code-keyword">import</span> tr
+
+result = <span class="code-string">10</span> / <span class="code-string">0</span>
+
+<span class="code-comment"># Output:</span>
+<span class="code-comment"># Sıfıra Bölme Hatası: division by zero</span>
+<span class="code-comment"># MERO tele QP4RM</span></code></pre>
+                </div>
+
+                <h4 class="sub-title">Japanese Example</h4>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX <span class="code-keyword">import</span> ja
+
+my_list = [<span class="code-string">1</span>, <span class="code-string">2</span>, <span class="code-string">3</span>]
+value = my_list[<span class="code-string">10</span>]
+
+<span class="code-comment"># Output:</span>
+<span class="code-comment"># インデックスエラー: list index out of range</span>
+<span class="code-comment"># MERO tele QP4RM</span></code></pre>
+                </div>
+
+                <h3 class="subsection-title">All Available Language Imports</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX <span class="code-keyword">import</span> (
+    arbe,  <span class="code-comment"># Arabic - العربية</span>
+    tr,    <span class="code-comment"># Turkish - Türkçe</span>
+    ja,    <span class="code-comment"># Japanese - 日本語</span>
+    zh,    <span class="code-comment"># Chinese - 中文</span>
+    ku,    <span class="code-comment"># Kurdish - کوردی</span>
+    es,    <span class="code-comment"># Spanish - Español</span>
+    hi,    <span class="code-comment"># Hindi - हिन्दी</span>
+    fr,    <span class="code-comment"># French - Français</span>
+    ru,    <span class="code-comment"># Russian - Русский</span>
+    de,    <span class="code-comment"># German - Deutsch</span>
+    pt     <span class="code-comment"># Portuguese - Português</span>
+)</code></pre>
+                </div>
+            </section>
+
+            <section id="core-classes" class="section">
+                <h2 class="section-title">Core Classes and Functions</h2>
+
+                <p class="content">PolyglotX provides a comprehensive set of classes and functions organized into several modules. This section details every class, method, and function available in the library.</p>
+
+                <h3 class="subsection-title">Module Structure</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>PolyglotX.core</h3>
+                        <p>Core functionality including exception handlers, translators, error processors, and language detection</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>PolyglotX.handlers</h3>
+                        <p>Error formatters, output handlers, signal handlers, and hook managers</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>PolyglotX.utils</h3>
+                        <p>Helper functions, decorators, validators, converters, and analyzers</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>PolyglotX.languages</h3>
+                        <p>Language-specific modules for 11 supported languages</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>PolyglotX.translators</h3>
+                        <p>Translation engine managers and adapters for multiple translation services</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>PolyglotX.cli</h3>
+                        <p>Command-line interface tools and commands</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exception-handlers" class="section">
+                <h2 class="section-title">Exception Handlers</h2>
+
+                <p class="content">PolyglotX provides multiple exception handler classes, each designed for specific use cases. All handlers translate errors in real-time to your chosen language.</p>
+
+                <h3 class="subsection-title">1. ExceptionHandler</h3>
+                <p class="content">The base exception handler class. Use this for standard error handling with translation.</p>
+                
+                <h4 class="sub-title">Class Signature</h4>
+                <div class="code-block">
+<pre><code><span class="code-class">class</span> <span class="code-function">ExceptionHandler</span>(language: <span class="code-class">str</span> = <span class="code-string">'ar'</span>, 
+                       show_credits: <span class="code-class">bool</span> = <span class="code-class">True</span>, 
+                       auto_exit: <span class="code-class">bool</span> = <span class="code-class">True</span>)</code></pre>
+                </div>
+
+                <h4 class="sub-title">Parameters</h4>
+                <table>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>language</td>
+                        <td>str</td>
+                        <td>'ar'</td>
+                        <td>Target language code for translation (ar, tr, ja, zh, ku, es, hi, fr, ru, de, pt)</td>
+                    </tr>
+                    <tr>
+                        <td>show_credits</td>
+                        <td>bool</td>
+                        <td>True</td>
+                        <td>Whether to display "MERO tele QP4RM" message after error</td>
+                    </tr>
+                    <tr>
+                        <td>auto_exit</td>
+                        <td>bool</td>
+                        <td>True</td>
+                        <td>Whether to exit the program after handling exception</td>
+                    </tr>
+                </table>
+
+                <h4 class="sub-title">Methods</h4>
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>install()</td>
+                        <td>Activates the exception handler globally</td>
+                    </tr>
+                    <tr>
+                        <td>uninstall()</td>
+                        <td>Deactivates the exception handler</td>
+                    </tr>
+                    <tr>
+                        <td>get_error_stats()</td>
+                        <td>Returns statistics about caught errors</td>
+                    </tr>
+                </table>
+
+                <h4 class="sub-title">Complete Usage Example</h4>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> ExceptionHandler
+
+<span class="code-comment"># Create handler instance</span>
+handler = <span class="code-function">ExceptionHandler</span>(
+    language=<span class="code-string">'ar'</span>,        <span class="code-comment"># Arabic translation</span>
+    show_credits=<span class="code-class">True</span>,    <span class="code-comment"># Show credits</span>
+    auto_exit=<span class="code-class">False</span>       <span class="code-comment"># Don't exit after error</span>
+)
+
+<span class="code-comment"># Activate the handler</span>
+handler.<span class="code-function">install</span>()
+
+<span class="code-comment"># Your code here - errors will be translated</span>
+<span class="code-keyword">try</span>:
+    x = undefined_variable
+<span class="code-keyword">except</span>:
+    <span class="code-keyword">pass</span>
+
+<span class="code-comment"># Get error statistics</span>
+stats = handler.<span class="code-function">get_error_stats</span>()
+<span class="code-keyword">print</span>(<span class="code-string">f"Total errors: {stats['total_errors']}"</span>)
+
+<span class="code-comment"># Deactivate when done</span>
+handler.<span class="code-function">uninstall</span>()</code></pre>
+                </div>
+
+                <h3 class="subsection-title">2. GlobalExceptionHandler</h3>
+                <p class="content">A singleton exception handler that ensures only one global instance exists. Useful for application-wide error handling.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> GlobalExceptionHandler
+
+<span class="code-comment"># First instance</span>
+handler1 = <span class="code-function">GlobalExceptionHandler</span>(language=<span class="code-string">'ar'</span>)
+
+<span class="code-comment"># Second call returns the same instance</span>
+handler2 = <span class="code-function">GlobalExceptionHandler</span>(language=<span class="code-string">'tr'</span>)
+
+<span class="code-comment"># handler1 and handler2 are the same object</span>
+<span class="code-keyword">print</span>(handler1 <span class="code-keyword">is</span> handler2)  <span class="code-comment"># True</span></code></pre>
+                </div>
+
+                <h3 class="subsection-title">3. ErrorTranslator</h3>
+                <p class="content">Translates individual errors without installing a global handler.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> ErrorTranslator
+
+translator = <span class="code-function">ErrorTranslator</span>(language=<span class="code-string">'ar'</span>)
+
+<span class="code-keyword">try</span>:
+    result = <span class="code-string">10</span> / <span class="code-string">0</span>
+<span class="code-keyword">except</span> <span class="code-class">Exception</span> <span class="code-keyword">as</span> e:
+    translated = translator.<span class="code-function">translate_error</span>(e)
+    <span class="code-keyword">print</span>(translated)
+    <span class="code-comment"># خطأ في القسمة على صفر: division by zero</span></code></pre>
+                </div>
+
+                <h3 class="subsection-title">4. TracebackTranslator</h3>
+                <p class="content">Translates complete tracebacks including file locations and line numbers.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> TracebackTranslator
+<span class="code-keyword">import</span> sys
+
+translator = <span class="code-function">TracebackTranslator</span>(language=<span class="code-string">'ar'</span>)
+
+<span class="code-keyword">try</span>:
+    undefined_variable
+<span class="code-keyword">except</span>:
+    exc_info = sys.<span class="code-function">exc_info</span>()
+    formatted = translator.<span class="code-function">format_traceback</span>(exc_info)
+    <span class="code-keyword">print</span>(formatted)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">5. ContextualErrorHandler</h3>
+                <p class="content">Includes local and global variables in error output for debugging.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> ContextualErrorHandler
+
+handler = <span class="code-function">ContextualErrorHandler</span>(
+    language=<span class="code-string">'ar'</span>,
+    include_locals=<span class="code-class">True</span>,    <span class="code-comment"># Show local variables</span>
+    include_globals=<span class="code-class">False</span>   <span class="code-comment"># Don't show globals</span>
+)
+handler.<span class="code-function">install</span>()</code></pre>
+                </div>
+
+                <h3 class="subsection-title">6. AsyncExceptionHandler</h3>
+                <p class="content">Handles exceptions in async/await code.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> AsyncExceptionHandler
+<span class="code-keyword">import</span> asyncio
+
+handler = <span class="code-function">AsyncExceptionHandler</span>(language=<span class="code-string">'ar'</span>)
+
+<span class="code-keyword">async</span> <span class="code-keyword">def</span> <span class="code-function">my_async_function</span>():
+    <span class="code-keyword">await</span> handler.<span class="code-function">handle_async_exception</span>(
+        some_async_operation()
+    )
+
+asyncio.<span class="code-function">run</span>(<span class="code-function">my_async_function</span>())</code></pre>
+                </div>
+
+                <h3 class="subsection-title">7. ThreadSafeExceptionHandler</h3>
+                <p class="content">Thread-safe handler for multi-threaded applications.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> ThreadSafeExceptionHandler
+<span class="code-keyword">import</span> threading
+
+handler = <span class="code-function">ThreadSafeExceptionHandler</span>(language=<span class="code-string">'ar'</span>)
+handler.<span class="code-function">install</span>()
+
+<span class="code-keyword">def</span> <span class="code-function">worker</span>():
+    <span class="code-comment"># Errors in threads will be handled safely</span>
+    x = undefined_variable
+
+threads = [threading.<span class="code-function">Thread</span>(target=worker) <span class="code-keyword">for</span> _ <span class="code-keyword">in</span> <span class="code-function">range</span>(<span class="code-string">10</span>)]
+<span class="code-keyword">for</span> t <span class="code-keyword">in</span> threads:
+    t.<span class="code-function">start</span>()
+<span class="code-keyword">for</span> t <span class="code-keyword">in</span> threads:
+    t.<span class="code-function">join</span>()</code></pre>
+                </div>
+
+                <h3 class="subsection-title">8. ChainedExceptionHandler</h3>
+                <p class="content">Chains multiple handlers together for complex error processing.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> ChainedExceptionHandler
+
+handler = <span class="code-function">ChainedExceptionHandler</span>(language=<span class="code-string">'ar'</span>)
+handler.<span class="code-function">add_handler</span>(custom_handler_1)
+handler.<span class="code-function">add_handler</span>(custom_handler_2)
+handler.<span class="code-function">install</span>()</code></pre>
+                </div>
+
+                <h3 class="subsection-title">9. FilteredExceptionHandler</h3>
+                <p class="content">Filters exceptions by type, allowing selective handling.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> FilteredExceptionHandler
+
+handler = <span class="code-function">FilteredExceptionHandler</span>(
+    language=<span class="code-string">'ar'</span>,
+    exception_types=[<span class="code-class">ValueError</span>, <span class="code-class">TypeError</span>]  <span class="code-comment"># Only handle these</span>
+)
+handler.<span class="code-function">install</span>()</code></pre>
+                </div>
+
+                <h3 class="subsection-title">10. LoggingExceptionHandler</h3>
+                <p class="content">Integrates with Python's logging module.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> LoggingExceptionHandler
+<span class="code-keyword">import</span> logging
+
+logging.<span class="code-function">basicConfig</span>(level=logging.<span class="code-class">ERROR</span>)
+
+handler = <span class="code-function">LoggingExceptionHandler</span>(
+    language=<span class="code-string">'ar'</span>,
+    logger_name=<span class="code-string">'my_app'</span>
+)
+handler.<span class="code-function">install</span>()</code></pre>
+                </div>
+            </section>
+
+            <section id="translators" class="section">
+                <h2 class="section-title">Translation System</h2>
+
+                <p class="content">PolyglotX provides a powerful translation system with multiple engines and caching mechanisms.</p>
+
+                <h3 class="subsection-title">1. Translator</h3>
+                <p class="content">The base translator class with automatic engine fallback.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.translator <span class="code-keyword">import</span> Translator
+
+translator = <span class="code-function">Translator</span>(
+    target_language=<span class="code-string">'ar'</span>,      <span class="code-comment"># Target language</span>
+    source_language=<span class="code-string">'auto'</span>     <span class="code-comment"># Auto-detect source</span>
+)
+
+<span class="code-comment"># Translate text</span>
+result = translator.<span class="code-function">translate</span>(<span class="code-string">"Error: File not found"</span>)
+<span class="code-keyword">print</span>(result)  <span class="code-comment"># خطأ: الملف غير موجود</span>
+
+<span class="code-comment"># Translate with parts preservation</span>
+result = translator.<span class="code-function">translate_parts</span>(<span class="code-string">"File 'config.json' not found"</span>)
+<span class="code-keyword">print</span>(result)  <span class="code-comment"># Preserves 'config.json' while translating rest</span></code></pre>
+                </div>
+
+                <h3 class="subsection-title">2. MultiEngineTranslator</h3>
+                <p class="content">Uses multiple translation engines with priority ordering.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.translator <span class="code-keyword">import</span> MultiEngineTranslator
+
+translator = <span class="code-function">MultiEngineTranslator</span>(
+    target_language=<span class="code-string">'ar'</span>,
+    engines=[<span class="code-string">'google'</span>, <span class="code-string">'mymemory'</span>, <span class="code-string">'libre'</span>]  <span class="code-comment"># Priority order</span>
+)
+
+result = translator.<span class="code-function">translate</span>(<span class="code-string">"ValueError"</span>)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">3. CachedTranslator</h3>
+                <p class="content">Advanced caching with persistent storage.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.translator <span class="code-keyword">import</span> CachedTranslator
+
+translator = <span class="code-function">CachedTranslator</span>(
+    target_language=<span class="code-string">'ar'</span>,
+    cache_file=<span class="code-string">'translation_cache.json'</span>,
+    max_cache_size=<span class="code-string">10000</span>
+)
+
+<span class="code-comment"># First call: translates and caches</span>
+result1 = translator.<span class="code-function">translate</span>(<span class="code-string">"Error"</span>)
+
+<span class="code-comment"># Second call: retrieved from cache (instant)</span>
+result2 = translator.<span class="code-function">translate</span>(<span class="code-string">"Error"</span>)
+
+<span class="code-comment"># Get cache statistics</span>
+stats = translator.<span class="code-function">get_cache_stats</span>()
+<span class="code-keyword">print</span>(<span class="code-string">f"Cache hit rate: {stats['hit_rate']}"</span>)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">4. BatchTranslator</h3>
+                <p class="content">Efficient batch translation with parallel processing.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.translator <span class="code-keyword">import</span> BatchTranslator
+
+translator = <span class="code-function">BatchTranslator</span>(
+    target_language=<span class="code-string">'ar'</span>,
+    batch_size=<span class="code-string">100</span>,
+    parallel=<span class="code-class">True</span>
+)
+
+errors = [
+    <span class="code-string">"TypeError: invalid type"</span>,
+    <span class="code-string">"ValueError: invalid value"</span>,
+    <span class="code-string">"NameError: name not defined"</span>,
+    <span class="code-comment"># ... hundreds more</span>
+]
+
+<span class="code-comment"># Translate all at once</span>
+translated = translator.<span class="code-function">translate_batch</span>(errors)
+
+<span class="code-comment"># Auto-batch with optimization</span>
+translated = translator.<span class="code-function">auto_translate_batch</span>(errors)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">5. OfflineTranslator</h3>
+                <p class="content">Works offline using pre-downloaded dictionaries.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.translator <span class="code-keyword">import</span> OfflineTranslator
+
+translator = <span class="code-function">OfflineTranslator</span>(
+    target_language=<span class="code-string">'ar'</span>,
+    dictionary_file=<span class="code-string">'ar_dict.json'</span>
+)
+
+<span class="code-comment"># Works without internet</span>
+result = translator.<span class="code-function">translate</span>(<span class="code-string">"Error"</span>)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">6. SmartTranslator</h3>
+                <p class="content">AI-powered translator with context awareness and quality checking.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.translator <span class="code-keyword">import</span> SmartTranslator
+
+translator = <span class="code-function">SmartTranslator</span>(
+    target_language=<span class="code-string">'ar'</span>,
+    quality_threshold=<span class="code-string">0.8</span>,     <span class="code-comment"># Minimum quality score</span>
+    enable_ai=<span class="code-class">True</span>             <span class="code-comment"># Use AI enhancement</span>
+)
+
+result = translator.<span class="code-function">translate</span>(<span class="code-string">"Complex error message"</span>)
+
+<span class="code-comment"># Get translation quality score</span>
+quality = translator.<span class="code-function">get_quality_score</span>(result)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">Translation Engine Support</h3>
+                <table>
+                    <tr>
+                        <th>Engine</th>
+                        <th>Languages</th>
+                        <th>Speed</th>
+                        <th>Quality</th>
+                        <th>Requires API Key</th>
+                    </tr>
+                    <tr>
+                        <td>Google Translate</td>
+                        <td>100+</td>
+                        <td>Fast</td>
+                        <td>Excellent</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>MyMemory</td>
+                        <td>80+</td>
+                        <td>Medium</td>
+                        <td>Good</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>LibreTranslate</td>
+                        <td>30+</td>
+                        <td>Medium</td>
+                        <td>Good</td>
+                        <td>Optional</td>
+                    </tr>
+                    <tr>
+                        <td>DeepL</td>
+                        <td>26</td>
+                        <td>Fast</td>
+                        <td>Excellent</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Yandex</td>
+                        <td>90+</td>
+                        <td>Fast</td>
+                        <td>Good</td>
+                        <td>Yes</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="formatters" class="section">
+                <h2 class="section-title">Error Formatters</h2>
+
+                <p class="content">Format translated errors in various output formats.</p>
+
+                <h3 class="subsection-title">Available Formatters</h3>
+                
+                <h4 class="sub-title">1. ColoredErrorFormatter</h4>
+                <p class="content">Colored console output with ANSI codes.</p>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.handlers.error_formatter <span class="code-keyword">import</span> ColoredErrorFormatter
+
+formatter = <span class="code-function">ColoredErrorFormatter</span>(
+    language=<span class="code-string">'ar'</span>,
+    color_scheme=<span class="code-string">'dark'</span>  <span class="code-comment"># 'dark' or 'light'</span>
+)
+
+<span class="code-keyword">try</span>:
+    x = <span class="code-string">10</span> / <span class="code-string">0</span>
+<span class="code-keyword">except</span> <span class="code-class">Exception</span> <span class="code-keyword">as</span> e:
+    formatted = formatter.<span class="code-function">format</span>(e)
+    <span class="code-keyword">print</span>(formatted)  <span class="code-comment"># Colored output</span></code></pre>
+                </div>
+
+                <h4 class="sub-title">2. HTMLErrorFormatter</h4>
+                <p class="content">HTML formatted errors for web display.</p>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.handlers.error_formatter <span class="code-keyword">import</span> HTMLErrorFormatter
+
+formatter = <span class="code-function">HTMLErrorFormatter</span>(
+    language=<span class="code-string">'ar'</span>,
+    style=<span class="code-string">'bootstrap'</span>  <span class="code-comment"># 'bootstrap', 'tailwind', or 'custom'</span>
+)
+
+<span class="code-keyword">try</span>:
+    x = undefined_variable
+<span class="code-keyword">except</span> <span class="code-class">Exception</span> <span class="code-keyword">as</span> e:
+    html = formatter.<span class="code-function">format</span>(e)
+    <span class="code-comment"># Returns complete HTML with styling</span></code></pre>
+                </div>
+
+                <h4 class="sub-title">3. JSONErrorFormatter</h4>
+                <p class="content">JSON formatted errors for API responses.</p>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.handlers.error_formatter <span class="code-keyword">import</span> JSONErrorFormatter
+<span class="code-keyword">import</span> json
+
+formatter = <span class="code-function">JSONErrorFormatter</span>(
+    language=<span class="code-string">'ar'</span>,
+    pretty=<span class="code-class">True</span>  <span class="code-comment"># Pretty print JSON</span>
+)
+
+<span class="code-keyword">try</span>:
+    result = <span class="code-string">10</span> / <span class="code-string">0</span>
+<span class="code-keyword">except</span> <span class="code-class">Exception</span> <span class="code-keyword">as</span> e:
+    json_output = formatter.<span class="code-function">format</span>(e)
+    error_dict = json.<span class="code-function">loads</span>(json_output)
+    <span class="code-keyword">print</span>(error_dict[<span class="code-string">'error_type'</span>])
+    <span class="code-keyword">print</span>(error_dict[<span class="code-string">'error_message'</span>])
+    <span class="code-keyword">print</span>(error_dict[<span class="code-string">'traceback'</span>])</code></pre>
+                </div>
+
+                <h4 class="sub-title">4. XMLErrorFormatter</h4>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.handlers.error_formatter <span class="code-keyword">import</span> XMLErrorFormatter
+
+formatter = <span class="code-function">XMLErrorFormatter</span>(language=<span class="code-string">'ar'</span>)
+
+<span class="code-keyword">try</span>:
+    my_list[<span class="code-string">100</span>]
+<span class="code-keyword">except</span> <span class="code-class">Exception</span> <span class="code-keyword">as</span> e:
+    xml = formatter.<span class="code-function">format</span>(e)
+    <span class="code-comment"># Returns XML structure</span></code></pre>
+                </div>
+
+                <h4 class="sub-title">5. MarkdownErrorFormatter</h4>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.handlers.error_formatter <span class="code-keyword">import</span> MarkdownErrorFormatter
+
+formatter = <span class="code-function">MarkdownErrorFormatter</span>(language=<span class="code-string">'ar'</span>)
+
+<span class="code-keyword">try</span>:
+    <span class="code-keyword">import</span> nonexistent_module
+<span class="code-keyword">except</span> <span class="code-class">Exception</span> <span class="code-keyword">as</span> e:
+    markdown = formatter.<span class="code-function">format</span>(e)
+    <span class="code-comment"># Perfect for documentation</span></code></pre>
+                </div>
+            </section>
+
+            <section id="output-handlers" class="section">
+                <h2 class="section-title">Output Handlers</h2>
+
+                <p class="content">Direct error output to various destinations.</p>
+
+                <h3 class="subsection-title">1. ConsoleOutputHandler</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.handlers.output_handler <span class="code-keyword">import</span> ConsoleOutputHandler
+
+handler = <span class="code-function">ConsoleOutputHandler</span>(
+    language=<span class="code-string">'ar'</span>,
+    colored=<span class="code-class">True</span>
+)
+
+handler.<span class="code-function">handle</span>(exception_object)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">2. FileOutputHandler</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.handlers.output_handler <span class="code-keyword">import</span> FileOutputHandler
+
+handler = <span class="code-function">FileOutputHandler</span>(
+    language=<span class="code-string">'ar'</span>,
+    file_path=<span class="code-string">'errors.log'</span>,
+    mode=<span class="code-string">'a'</span>,  <span class="code-comment"># Append mode</span>
+    encoding=<span class="code-string">'utf-8'</span>
+)
+
+handler.<span class="code-function">handle</span>(exception_object)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">3. EmailOutputHandler</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.handlers.output_handler <span class="code-keyword">import</span> EmailOutputHandler
+
+handler = <span class="code-function">EmailOutputHandler</span>(
+    language=<span class="code-string">'ar'</span>,
+    smtp_server=<span class="code-string">'smtp.gmail.com'</span>,
+    smtp_port=<span class="code-string">587</span>,
+    sender=<span class="code-string">'errors@myapp.com'</span>,
+    recipients=[<span class="code-string">'admin@myapp.com'</span>],
+    username=<span class="code-string">'your_email'</span>,
+    password=<span class="code-string">'your_password'</span>
+)
+
+handler.<span class="code-function">handle</span>(exception_object)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">4. WebhookOutputHandler</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.handlers.output_handler <span class="code-keyword">import</span> WebhookOutputHandler
+
+handler = <span class="code-function">WebhookOutputHandler</span>(
+    language=<span class="code-string">'ar'</span>,
+    webhook_url=<span class="code-string">'https://hooks.slack.com/services/...'</span>,
+    method=<span class="code-string">'POST'</span>,
+    headers={<span class="code-string">'Content-Type'</span>: <span class="code-string">'application/json'</span>}
+)
+
+handler.<span class="code-function">handle</span>(exception_object)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">5. DatabaseOutputHandler</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.handlers.output_handler <span class="code-keyword">import</span> DatabaseOutputHandler
+
+handler = <span class="code-function">DatabaseOutputHandler</span>(
+    language=<span class="code-string">'ar'</span>,
+    connection_string=<span class="code-string">'postgresql://user:pass@localhost/db'</span>,
+    table_name=<span class="code-string">'errors'</span>
+)
+
+handler.<span class="code-function">handle</span>(exception_object)</code></pre>
+                </div>
+            </section>
+
+            <section id="decorators" class="section">
+                <h2 class="section-title">Decorators</h2>
+
+                <p class="content">Simplify error handling with powerful decorators.</p>
+
+                <h3 class="subsection-title">1. @handle_exceptions</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.utils.decorators <span class="code-keyword">import</span> handle_exceptions
+
+<span class="code-comment">@handle_exceptions</span>(language=<span class="code-string">'ar'</span>, show_credits=<span class="code-class">True</span>)
+<span class="code-keyword">def</span> <span class="code-function">my_function</span>():
+    x = undefined_variable
+    <span class="code-keyword">return</span> x
+
+<span class="code-comment"># Errors are automatically caught and translated</span>
+<span class="code-function">my_function</span>()</code></pre>
+                </div>
+
+                <h3 class="subsection-title">2. @translate_errors</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.utils.decorators <span class="code-keyword">import</span> translate_errors
+
+<span class="code-comment">@translate_errors</span>(language=<span class="code-string">'ar'</span>)
+<span class="code-keyword">def</span> <span class="code-function">divide</span>(a, b):
+    <span class="code-keyword">return</span> a / b
+
+result = <span class="code-function">divide</span>(<span class="code-string">10</span>, <span class="code-string">0</span>)  <span class="code-comment"># Error translated to Arabic</span></code></pre>
+                </div>
+
+                <h3 class="subsection-title">3. @retry_on_error</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.utils.decorators <span class="code-keyword">import</span> retry_on_error
+
+<span class="code-comment">@retry_on_error</span>(max_retries=<span class="code-string">3</span>, delay=<span class="code-string">1.0</span>, language=<span class="code-string">'ar'</span>)
+<span class="code-keyword">def</span> <span class="code-function">unreliable_operation</span>():
+    <span class="code-comment"># May fail, will retry up to 3 times</span>
+    <span class="code-keyword">import</span> random
+    <span class="code-keyword">if</span> random.<span class="code-function">random</span>() < <span class="code-string">0.5</span>:
+        <span class="code-keyword">raise</span> <span class="code-class">ValueError</span>(<span class="code-string">"Random failure"</span>)
+    <span class="code-keyword">return</span> <span class="code-string">"Success"</span>
+
+result = <span class="code-function">unreliable_operation</span>()</code></pre>
+                </div>
+
+                <h3 class="subsection-title">4. @fallback_on_error</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.utils.decorators <span class="code-keyword">import</span> fallback_on_error
+
+<span class="code-comment">@fallback_on_error</span>(fallback_value=<span class="code-class">None</span>, language=<span class="code-string">'ar'</span>)
+<span class="code-keyword">def</span> <span class="code-function">risky_operation</span>():
+    x = undefined_variable
+    <span class="code-keyword">return</span> x
+
+result = <span class="code-function">risky_operation</span>()  <span class="code-comment"># Returns None instead of crashing</span></code></pre>
+                </div>
+
+                <h3 class="subsection-title">5. @log_exceptions</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.utils.decorators <span class="code-keyword">import</span> log_exceptions
+<span class="code-keyword">import</span> logging
+
+logging.<span class="code-function">basicConfig</span>(level=logging.<span class="code-class">ERROR</span>)
+
+<span class="code-comment">@log_exceptions</span>(language=<span class="code-string">'ar'</span>, logger_name=<span class="code-string">'my_app'</span>)
+<span class="code-keyword">def</span> <span class="code-function">my_function</span>():
+    x = <span class="code-string">10</span> / <span class="code-string">0</span>
+
+<span class="code-function">my_function</span>()  <span class="code-comment"># Error logged in Arabic</span></code></pre>
+                </div>
+
+                <h3 class="subsection-title">6. @measure_exception_time</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.utils.decorators <span class="code-keyword">import</span> measure_exception_time
+
+<span class="code-comment">@measure_exception_time</span>(language=<span class="code-string">'ar'</span>)
+<span class="code-keyword">def</span> <span class="code-function">slow_operation</span>():
+    <span class="code-keyword">import</span> time
+    time.<span class="code-function">sleep</span>(<span class="code-string">2</span>)
+    <span class="code-keyword">raise</span> <span class="code-class">ValueError</span>(<span class="code-string">"Error after 2 seconds"</span>)
+
+<span class="code-function">slow_operation</span>()  <span class="code-comment"># Shows error + execution time</span></code></pre>
+                </div>
+
+                <h3 class="subsection-title">7. @suppress_exceptions</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.utils.decorators <span class="code-keyword">import</span> suppress_exceptions
+
+<span class="code-comment">@suppress_exceptions</span>(exception_types=[<span class="code-class">ValueError</span>])
+<span class="code-keyword">def</span> <span class="code-function">my_function</span>():
+    <span class="code-keyword">raise</span> <span class="code-class">ValueError</span>(<span class="code-string">"This will be suppressed"</span>)
+
+<span class="code-function">my_function</span>()  <span class="code-comment"># No error raised</span></code></pre>
+                </div>
+
+                <h3 class="subsection-title">8. @notify_on_exception</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.utils.decorators <span class="code-keyword">import</span> notify_on_exception
+
+<span class="code-comment">@notify_on_exception</span>(
+    language=<span class="code-string">'ar'</span>,
+    email=<span class="code-string">'admin@example.com'</span>,
+    webhook=<span class="code-string">'https://hooks.slack.com/...'</span>
+)
+<span class="code-keyword">def</span> <span class="code-function">critical_operation</span>():
+    <span class="code-comment"># If error occurs, send notifications</span>
+    <span class="code-keyword">raise</span> <span class="code-class">RuntimeError</span>(<span class="code-string">"Critical error"</span>)
+
+<span class="code-function">critical_operation</span>()</code></pre>
+                </div>
+            </section>
+
+            <section id="utilities" class="section">
+                <h2 class="section-title">Utility Functions</h2>
+
+                <h3 class="subsection-title">Helper Functions</h3>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.utils.helpers <span class="code-keyword">import</span> (
+    detect_language,
+    extract_error_info,
+    format_stack_trace,
+    parse_exception,
+    sanitize_error_message,
+    get_error_context,
+    calculate_error_hash,
+    group_similar_errors,
+    suggest_fixes,
+    find_error_documentation
+)
+
+<span class="code-comment"># Detect language of text</span>
+lang = <span class="code-function">detect_language</span>(<span class="code-string">"مرحبا"</span>)  <span class="code-comment"># Returns 'ar'</span>
+
+<span class="code-comment"># Extract error information</span>
+error_info = <span class="code-function">extract_error_info</span>(exception_object)
+
+<span class="code-comment"># Format stack trace</span>
+formatted = <span class="code-function">format_stack_trace</span>(traceback_object)
+
+<span class="code-comment"># Parse exception details</span>
+details = <span class="code-function">parse_exception</span>(exception_object)
+
+<span class="code-comment"># Sanitize error message</span>
+clean_msg = <span class="code-function">sanitize_error_message</span>(<span class="code-string">"Error with sensitive data: API_KEY_123"</span>)
+
+<span class="code-comment"># Get error context</span>
+context = <span class="code-function">get_error_context</span>(exception_object, lines_before=<span class="code-string">5</span>, lines_after=<span class="code-string">5</span>)
+
+<span class="code-comment"># Calculate unique hash for error</span>
+error_hash = <span class="code-function">calculate_error_hash</span>(exception_object)
+
+<span class="code-comment"># Group similar errors</span>
+groups = <span class="code-function">group_similar_errors</span>([error1, error2, error3])
+
+<span class="code-comment"># Get fix suggestions</span>
+suggestions = <span class="code-function">suggest_fixes</span>(exception_object)
+
+<span class="code-comment"># Find documentation for error</span>
+docs = <span class="code-function">find_error_documentation</span>(<span class="code-string">"ValueError"</span>)</code></pre>
+                </div>
+            </section>
+
+            <section id="cli-tools" class="section">
+                <h2 class="section-title">Command Line Tools</h2>
+
+                <h3 class="subsection-title">Available CLI Commands</h3>
+                
+                <h4 class="sub-title">1. Translate Command</h4>
+                <div class="code-block">
+<pre><code><span class="code-comment"># Translate single text</span>
+polyglotx translate "Error occurred" --language ar
+
+<span class="code-comment"># Translate from file</span>
+polyglotx translate --file errors.txt --language ar --output translated.txt
+
+<span class="code-comment"># Interactive mode</span>
+polyglotx translate --interactive --language ar</code></pre>
+                </div>
+
+                <h4 class="sub-title">2. Test Command</h4>
+                <div class="code-block">
+<pre><code><span class="code-comment"># Test translation engine</span>
+polyglotx test --language ar
+
+<span class="code-comment"># Test specific errors</span>
+polyglotx test --errors ValueError TypeError --language ar
+
+<span class="code-comment"># Test all languages</span>
+polyglotx test --all-languages</code></pre>
+                </div>
+
+                <h4 class="sub-title">3. Benchmark Command</h4>
+                <div class="code-block">
+<pre><code><span class="code-comment"># Benchmark translation speed</span>
+polyglotx benchmark --language ar --count 100
+
+<span class="code-comment"># Compare engines</span>
+polyglotx benchmark --compare-engines --language ar</code></pre>
+                </div>
+
+                <h4 class="sub-title">4. Config Command</h4>
+                <div class="code-block">
+<pre><code><span class="code-comment"># Set default language</span>
+polyglotx config set language ar
+
+<span class="code-comment"># Show configuration</span>
+polyglotx config show
+
+<span class="code-comment"># Reset to defaults</span>
+polyglotx config reset</code></pre>
+                </div>
+            </section>
+
+            <section id="advanced-usage" class="section">
+                <h2 class="section-title">Advanced Usage Examples</h2>
+
+                <h3 class="subsection-title">Example 1: Web Application Error Handling</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> flask <span class="code-keyword">import</span> Flask, jsonify
+<span class="code-keyword">from</span> PolyglotX.handlers.error_formatter <span class="code-keyword">import</span> JSONErrorFormatter
+<span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> ExceptionHandler
+
+app = <span class="code-function">Flask</span>(__name__)
+formatter = <span class="code-function">JSONErrorFormatter</span>(language=<span class="code-string">'ar'</span>)
+
+<span class="code-comment">@app.errorhandler</span>(<span class="code-class">Exception</span>)
+<span class="code-keyword">def</span> <span class="code-function">handle_error</span>(error):
+    json_error = formatter.<span class="code-function">format</span>(error)
+    <span class="code-keyword">return</span> <span class="code-function">jsonify</span>(json_error), <span class="code-string">500</span>
+
+<span class="code-comment">@app.route</span>(<span class="code-string">'/api/data'</span>)
+<span class="code-keyword">def</span> <span class="code-function">get_data</span>():
+    <span class="code-comment"># Errors are automatically formatted in Arabic JSON</span>
+    result = <span class="code-string">10</span> / <span class="code-string">0</span>
+    <span class="code-keyword">return</span> <span class="code-function">jsonify</span>(result)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">Example 2: Multi-Language Support</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.translator <span class="code-keyword">import</span> Translator
+
+<span class="code-keyword">class</span> <span class="code-class">MultiLangErrorHandler</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):
+        self.translators = {
+            <span class="code-string">'ar'</span>: <span class="code-function">Translator</span>(<span class="code-string">'ar'</span>),
+            <span class="code-string">'tr'</span>: <span class="code-function">Translator</span>(<span class="code-string">'tr'</span>),
+            <span class="code-string">'ja'</span>: <span class="code-function">Translator</span>(<span class="code-string">'ja'</span>),
+            <span class="code-string">'zh'</span>: <span class="code-function">Translator</span>(<span class="code-string">'zh-CN'</span>)
+        }
+    
+    <span class="code-keyword">def</span> <span class="code-function">translate_error</span>(self, error, user_language):
+        translator = self.translators.<span class="code-function">get</span>(user_language)
+        <span class="code-keyword">if</span> translator:
+            <span class="code-keyword">return</span> translator.<span class="code-function">translate</span>(<span class="code-function">str</span>(error))
+        <span class="code-keyword">return</span> <span class="code-function">str</span>(error)
+
+handler = <span class="code-function">MultiLangErrorHandler</span>()
+translated = handler.<span class="code-function">translate_error</span>(exception, <span class="code-string">'ar'</span>)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">Example 3: Context Manager Usage</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.context_manager <span class="code-keyword">import</span> translated_errors
+
+<span class="code-keyword">with</span> <span class="code-function">translated_errors</span>(language=<span class="code-string">'ar'</span>, show_credits=<span class="code-class">True</span>):
+    <span class="code-comment"># All errors in this block are translated</span>
+    x = undefined_variable
+    y = <span class="code-string">10</span> / <span class="code-string">0</span>
+
+<span class="code-comment"># Outside the context, errors are normal</span>
+z = normal_error  <span class="code-comment"># Regular Python error</span></code></pre>
+                </div>
+
+                <h3 class="subsection-title">Example 4: Custom Error Processing Pipeline</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> ChainedExceptionHandler
+<span class="code-keyword">from</span> PolyglotX.handlers.output_handler <span class="code-keyword">import</span> (
+    FileOutputHandler,
+    EmailOutputHandler,
+    WebhookOutputHandler
+)
+
+<span class="code-comment"># Create processing pipeline</span>
+handler = <span class="code-function">ChainedExceptionHandler</span>(language=<span class="code-string">'ar'</span>)
+
+<span class="code-comment"># Add file logging</span>
+handler.<span class="code-function">add_handler</span>(<span class="code-function">FileOutputHandler</span>(
+    language=<span class="code-string">'ar'</span>,
+    file_path=<span class="code-string">'errors.log'</span>
+))
+
+<span class="code-comment"># Add email notifications for critical errors</span>
+handler.<span class="code-function">add_handler</span>(<span class="code-function">EmailOutputHandler</span>(
+    language=<span class="code-string">'ar'</span>,
+    smtp_server=<span class="code-string">'smtp.gmail.com'</span>,
+    recipients=[<span class="code-string">'admin@example.com'</span>]
+))
+
+<span class="code-comment"># Add Slack webhook</span>
+handler.<span class="code-function">add_handler</span>(<span class="code-function">WebhookOutputHandler</span>(
+    language=<span class="code-string">'ar'</span>,
+    webhook_url=<span class="code-string">'https://hooks.slack.com/...'</span>
+))
+
+handler.<span class="code-function">install</span>()</code></pre>
+                </div>
+            </section>
+
+            <section id="languages" class="section">
+                <h2 class="section-title">Supported Languages</h2>
+
+                <table>
+                    <tr>
+                        <th>Language</th>
+                        <th>Code</th>
+                        <th>Native Name</th>
+                        <th>Import Module</th>
+                        <th>Direction</th>
+                    </tr>
+                    <tr>
+                        <td>Arabic</td>
+                        <td>ar</td>
+                        <td>العربية</td>
+                        <td>from PolyglotX import arbe</td>
+                        <td>RTL</td>
+                    </tr>
+                    <tr>
+                        <td>Turkish</td>
+                        <td>tr</td>
+                        <td>Türkçe</td>
+                        <td>from PolyglotX import tr</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>Japanese</td>
+                        <td>ja</td>
+                        <td>日本語</td>
+                        <td>from PolyglotX import ja</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>Chinese</td>
+                        <td>zh / zh-CN</td>
+                        <td>中文</td>
+                        <td>from PolyglotX import zh</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>Kurdish</td>
+                        <td>ku</td>
+                        <td>کوردی</td>
+                        <td>from PolyglotX import ku</td>
+                        <td>RTL</td>
+                    </tr>
+                    <tr>
+                        <td>Spanish</td>
+                        <td>es</td>
+                        <td>Español</td>
+                        <td>from PolyglotX import es</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>Hindi</td>
+                        <td>hi</td>
+                        <td>हिन्दी</td>
+                        <td>from PolyglotX import hi</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>French</td>
+                        <td>fr</td>
+                        <td>Français</td>
+                        <td>from PolyglotX import fr</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>Russian</td>
+                        <td>ru</td>
+                        <td>Русский</td>
+                        <td>from PolyglotX import ru</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>German</td>
+                        <td>de</td>
+                        <td>Deutsch</td>
+                        <td>from PolyglotX import de</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>Portuguese</td>
+                        <td>pt</td>
+                        <td>Português</td>
+                        <td>from PolyglotX import pt</td>
+                        <td>LTR</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="configuration" class="section">
+                <h2 class="section-title">Configuration Options</h2>
+
+                <h3 class="subsection-title">Global Configuration</h3>
+                <div class="code-block">
+<pre><code><span class="code-keyword">import</span> PolyglotX
+
+<span class="code-comment"># Set global defaults</span>
+PolyglotX.<span class="code-function">set_default_language</span>(<span class="code-string">'ar'</span>)
+PolyglotX.<span class="code-function">set_show_credits</span>(<span class="code-class">True</span>)
+PolyglotX.<span class="code-function">set_auto_exit</span>(<span class="code-class">False</span>)
+
+<span class="code-comment"># Configure caching</span>
+PolyglotX.<span class="code-function">set_cache_enabled</span>(<span class="code-class">True</span>)
+PolyglotX.<span class="code-function">set_cache_size</span>(<span class="code-string">10000</span>)
+PolyglotX.<span class="code-function">set_cache_ttl</span>(<span class="code-string">3600</span>)  <span class="code-comment"># 1 hour</span>
+
+<span class="code-comment"># Configure translation engines</span>
+PolyglotX.<span class="code-function">set_preferred_engine</span>(<span class="code-string">'google'</span>)
+PolyglotX.<span class="code-function">set_engine_timeout</span>(<span class="code-string">10.0</span>)
+PolyglotX.<span class="code-function">set_retry_attempts</span>(<span class="code-string">3</span>)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">Configuration File</h3>
+                <div class="code-block">
+<pre><code><span class="code-comment"># Create polyglotx.yaml</span>
+default:
+  language: ar
+  show_credits: true
+  auto_exit: false
+
+cache:
+  enabled: true
+  size: 10000
+  ttl: 3600
+
+engines:
+  preferred: google
+  timeout: 10.0
+  retry: 3
+  fallback: [mymemory, libre]
+
+output:
+  format: colored
+  file: errors.log
+  
+translation:
+  quality_threshold: 0.8
+  preserve_variables: true
+  translate_stack_trace: true</code></pre>
+                </div>
+            </section>
+
+            <section id="best-practices" class="section">
+                <h2 class="section-title">Best Practices</h2>
+
+                <div class="note">
+                    <div class="note-title">Performance Optimization</div>
+                    <ul>
+                        <li>Enable caching for production environments</li>
+                        <li>Use CachedTranslator for frequently translated errors</li>
+                        <li>Batch translate when processing multiple errors</li>
+                        <li>Consider OfflineTranslator for offline applications</li>
+                    </ul>
+                </div>
+
+                <div class="important">
+                    <div class="important-title">Security Considerations</div>
+                    <ul>
+                        <li>Sanitize error messages before translation to remove sensitive data</li>
+                        <li>Use FileOutputHandler instead of console in production</li>
+                        <li>Encrypt error logs containing translated messages</li>
+                        <li>Limit error context to avoid exposing internal code</li>
+                    </ul>
+                </div>
+
+                <div class="success">
+                    <div class="success-title">Production Deployment</div>
+                    <ul>
+                        <li>Set auto_exit=False for web applications</li>
+                        <li>Use LoggingExceptionHandler for proper logging</li>
+                        <li>Configure email notifications for critical errors</li>
+                        <li>Monitor translation API usage and costs</li>
+                        <li>Use CDN for offline dictionaries</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="troubleshooting" class="section">
+                <h2 class="section-title">Troubleshooting</h2>
+
+                <h3 class="subsection-title">Common Issues</h3>
+                
+                <h4 class="sub-title">Translation Not Working</h4>
+                <div class="code-block">
+<pre><code><span class="code-comment"># Check internet connection</span>
+<span class="code-keyword">import</span> requests
+<span class="code-keyword">try</span>:
+    requests.<span class="code-function">get</span>(<span class="code-string">'https://translate.google.com'</span>, timeout=<span class="code-string">5</span>)
+    <span class="code-keyword">print</span>(<span class="code-string">"Connection OK"</span>)
+<span class="code-keyword">except</span>:
+    <span class="code-keyword">print</span>(<span class="code-string">"Connection failed"</span>)
+
+<span class="code-comment"># Test translator directly</span>
+<span class="code-keyword">from</span> PolyglotX.core.translator <span class="code-keyword">import</span> Translator
+translator = <span class="code-function">Translator</span>(<span class="code-string">'ar'</span>)
+result = translator.<span class="code-function">translate</span>(<span class="code-string">"test"</span>)
+<span class="code-keyword">print</span>(result)</code></pre>
+                </div>
+
+                <h4 class="sub-title">Character Encoding Issues</h4>
+                <div class="code-block">
+<pre><code><span class="code-comment"># Ensure UTF-8 encoding</span>
+<span class="code-keyword">import</span> sys
+sys.stdout.reconfigure(encoding=<span class="code-string">'utf-8'</span>)
+
+<span class="code-comment"># For file output</span>
+<span class="code-keyword">with</span> <span class="code-function">open</span>(<span class="code-string">'errors.log'</span>, <span class="code-string">'w'</span>, encoding=<span class="code-string">'utf-8'</span>) <span class="code-keyword">as</span> f:
+    f.<span class="code-function">write</span>(translated_error)</code></pre>
+                </div>
+
+                <h4 class="sub-title">Cache Issues</h4>
+                <div class="code-block">
+<pre><code><span class="code-comment"># Clear cache</span>
+<span class="code-keyword">from</span> PolyglotX.core.translator <span class="code-keyword">import</span> CachedTranslator
+translator = <span class="code-function">CachedTranslator</span>(<span class="code-string">'ar'</span>)
+translator.<span class="code-function">clear_cache</span>()
+
+<span class="code-comment"># Disable cache temporarily</span>
+translator.<span class="code-function">set_cache_enabled</span>(<span class="code-class">False</span>)</code></pre>
+                </div>
+            </section>
+
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="logo" style="font-size: 32px; margin-bottom: 20px;">PolyglotX</div>
+                        <p style="margin-bottom: 20px;">Advanced Multilingual Exception Handler for Python</p>
+                        <p>Version 1.0.0 - Production Ready</p>
+                        <p style="margin-top: 30px;">Developed by MERO</p>
+                        <p>Contact: @QP4RM (Telegram)</p>
+                        <p style="margin-top: 20px;">Licensed under MIT License</p>
+                        <p style="margin-top: 30px; font-size: 14px; color: var(--primary);">MERO tele QP4RM</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Arabic Content -->
+    <div id="lang-ar" class="lang-content">
+        <section class="hero">
+            <div class="container">
+                <h1>PolyglotX</h1>
+                <p>مكتبة قوية لترجمة أخطاء بايثون لأي لغة</p>
+                <img src="img/hero.png" alt="لافتة PolyglotX" class="hero-image">
+                <p>دليل كامل يشرح طريقة ترجمة أخطاء بايثون إلى 11 لغة مختلفة</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="toc">
+                <h3>جدول المحتويات</h3>
+                <ul>
+                    <li><a href="#installation">1. التثبيت</a></li>
+                    <li><a href="#quick-start">2. دليل البدء السريع</a></li>
+                    <li><a href="#core-classes">3. الفئات والدوال الأساسية</a></li>
+                    <li><a href="#exception-handlers">4. معالجات الاستثناءات</a></li>
+                    <li><a href="#translators">5. نظام الترجمة</a></li>
+                    <li><a href="#formatters">6. منسقات الأخطاء</a></li>
+                    <li><a href="#output-handlers">7. معالجات الإخراج</a></li>
+                    <li><a href="#decorators">8. الديكوريتورات</a></li>
+                    <li><a href="#utilities">9. الدوال المساعدة</a></li>
+                    <li><a href="#cli-tools">10. أدوات سطر الأوامر</a></li>
+                    <li><a href="#advanced-usage">11. أمثلة الاستخدام المتقدم</a></li>
+                    <li><a href="#languages">12. اللغات المدعومة</a></li>
+                    <li><a href="#configuration">13. خيارات التكوين</a></li>
+                    <li><a href="#best-practices">14. أفضل الممارسات</a></li>
+                    <li><a href="#troubleshooting">15. استكشاف الأخطاء وإصلاحها</a></li>
+                </ul>
+            </div>
+
+            <section id="installation" class="section">
+                <h2 class="section-title">التثبيت</h2>
+                
+                <h3 class="subsection-title">من PyPI (موصى به)</h3>
+                <div class="code-block">
+<pre><code>pip install PolyglotX</code></pre>
+                </div>
+
+                <h3 class="subsection-title">من مصدر GitHub</h3>
+                <div class="code-block">
+<pre><code>git clone https://github.com/6x-u/polyglotx.git
+cd polyglotx
+pip install -e .</code></pre>
+                </div>
+
+                <h3 class="subsection-title">ما تحتاجه</h3>
+                <ul>
+                    <li>بايثون 3.6 أو أحدث</li>
+                    <li>إنترنت للترجمة</li>
+                    <li>512 ميجابايت رام</li>
+                    <li>يعمل على ويندوز وماك ولينكس</li>
+                </ul>
+
+                <h3 class="subsection-title">المكتبات المطلوبة</h3>
+                <p class="content">تثبت تلقائياً مع المكتبة:</p>
+                <ul>
+                    <li>deep-translator >= 1.11.0</li>
+                    <li>translatepy >= 2.3</li>
+                    <li>requests >= 2.25.0</li>
+                    <li>colorama >= 0.4.0</li>
+                    <li>pyyaml >= 5.4.0</li>
+                    <li>click >= 8.0.0</li>
+                </ul>
+            </section>
+
+            <section id="quick-start" class="section">
+                <h2 class="section-title">كيف تبدأ</h2>
+
+                <h3 class="subsection-title">طريقة الاستخدام البسيطة</h3>
+                
+                <h4 class="sub-title">مثال العربية</h4>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX <span class="code-keyword">import</span> arbe
+
+<span class="code-comment"># سيتم التقاط وترجمة الأخطاء تلقائياً إلى العربية</span>
+x = undefined_variable
+
+<span class="code-comment"># النتيجة:</span>
+<span class="code-comment"># خطأ في الاسم: name 'undefined_variable' is not defined</span>
+<span class="code-comment"># MERO tele QP4RM</span></code></pre>
+                </div>
+
+                <h4 class="sub-title">جميع اللغات المتوفرة</h4>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX <span class="code-keyword">import</span> (
+    arbe,  <span class="code-comment"># العربية</span>
+    tr,    <span class="code-comment"># التركية</span>
+    ja,    <span class="code-comment"># اليابانية</span>
+    zh,    <span class="code-comment"># الصينية</span>
+    ku,    <span class="code-comment"># الكردية</span>
+    es,    <span class="code-comment"># الإسبانية</span>
+    hi,    <span class="code-comment"># الهندية</span>
+    fr,    <span class="code-comment"># الفرنسية</span>
+    ru,    <span class="code-comment"># الروسية</span>
+    de,    <span class="code-comment"># الألمانية</span>
+    pt     <span class="code-comment"># البرتغالية</span>
+)</code></pre>
+                </div>
+            </section>
+
+            <section id="exception-handlers" class="section">
+                <h2 class="section-title">معالجات الأخطاء</h2>
+
+                <p class="content">المكتبة توفر عدة أنواع لمعالجة الأخطاء، كل نوع له استخدام معين. جميعها تترجم الأخطاء مباشرة للغة اللي تختارها.</p>
+
+                <h3 class="subsection-title">1. ExceptionHandler</h3>
+                <p class="content">النوع الأساسي لمعالجة الأخطاء. استخدمه لمعالجة الأخطاء العادية مع الترجمة.</p>
+                
+                <h4 class="sub-title">طريقة الاستخدام</h4>
+                <div class="code-block">
+<pre><code><span class="code-class">class</span> <span class="code-function">ExceptionHandler</span>(language: <span class="code-class">str</span> = <span class="code-string">'ar'</span>, 
+                       show_credits: <span class="code-class">bool</span> = <span class="code-class">True</span>, 
+                       auto_exit: <span class="code-class">bool</span> = <span class="code-class">True</span>)</code></pre>
+                </div>
+
+                <h4 class="sub-title">المعاملات</h4>
+                <table>
+                    <tr>
+                        <th>المعامل</th>
+                        <th>النوع</th>
+                        <th>الافتراضي</th>
+                        <th>الوصف</th>
+                    </tr>
+                    <tr>
+                        <td>language</td>
+                        <td>str</td>
+                        <td>'ar'</td>
+                        <td>اللغة اللي تبي تترجم لها (ar, tr, ja, zh, ku, es, hi, fr, ru, de, pt)</td>
+                    </tr>
+                    <tr>
+                        <td>show_credits</td>
+                        <td>bool</td>
+                        <td>True</td>
+                        <td>يعرض رسالة "MERO tele QP4RM" بعد الخطأ أو لا</td>
+                    </tr>
+                    <tr>
+                        <td>auto_exit</td>
+                        <td>bool</td>
+                        <td>True</td>
+                        <td>يطفي البرنامج بعد الخطأ أو لا</td>
+                    </tr>
+                </table>
+
+                <h4 class="sub-title">الطرق</h4>
+                <table>
+                    <tr>
+                        <th>الطريقة</th>
+                        <th>الوصف</th>
+                    </tr>
+                    <tr>
+                        <td>install()</td>
+                        <td>يشغل معالج الأخطاء</td>
+                    </tr>
+                    <tr>
+                        <td>uninstall()</td>
+                        <td>يوقف معالج الأخطاء</td>
+                    </tr>
+                    <tr>
+                        <td>get_error_stats()</td>
+                        <td>يعطيك معلومات عن الأخطاء اللي صارت</td>
+                    </tr>
+                </table>
+
+                <h4 class="sub-title">مثال عملي</h4>
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.exception_handler <span class="code-keyword">import</span> ExceptionHandler
+
+<span class="code-comment"># إنشاء نسخة من المعالج</span>
+handler = <span class="code-function">ExceptionHandler</span>(
+    language=<span class="code-string">'ar'</span>,        <span class="code-comment"># ترجمة عربية</span>
+    show_credits=<span class="code-class">True</span>,    <span class="code-comment"># إظهار الاعتمادات</span>
+    auto_exit=<span class="code-class">False</span>       <span class="code-comment"># عدم الخروج بعد الخطأ</span>
+)
+
+<span class="code-comment"># تنشيط المعالج</span>
+handler.<span class="code-function">install</span>()
+
+<span class="code-comment"># الكود الخاص بك هنا - سيتم ترجمة الأخطاء</span>
+<span class="code-keyword">try</span>:
+    x = undefined_variable
+<span class="code-keyword">except</span>:
+    <span class="code-keyword">pass</span>
+
+<span class="code-comment"># الحصول على إحصائيات الأخطاء</span>
+stats = handler.<span class="code-function">get_error_stats</span>()
+<span class="code-keyword">print</span>(<span class="code-string">f"إجمالي الأخطاء: {stats['total_errors']}"</span>)
+
+<span class="code-comment"># إلغاء التنشيط عند الانتهاء</span>
+handler.<span class="code-function">uninstall</span>()</code></pre>
+                </div>
+            </section>
+
+            <section id="translators" class="section">
+                <h2 class="section-title">المترجم</h2>
+
+                <p class="content">المكتبة فيها نظام ترجمة يستخدم عدة محركات مع حفظ الترجمات.</p>
+
+                <h3 class="subsection-title">1. Translator</h3>
+                <p class="content">المترجم الأساسي، يستخدم محركات مختلفة تلقائياً.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.translator <span class="code-keyword">import</span> Translator
+
+translator = <span class="code-function">Translator</span>(
+    target_language=<span class="code-string">'ar'</span>,      <span class="code-comment"># اللغة المستهدفة</span>
+    source_language=<span class="code-string">'auto'</span>     <span class="code-comment"># اكتشاف المصدر تلقائياً</span>
+)
+
+<span class="code-comment"># ترجمة النص</span>
+result = translator.<span class="code-function">translate</span>(<span class="code-string">"Error: File not found"</span>)
+<span class="code-keyword">print</span>(result)  <span class="code-comment"># خطأ: الملف غير موجود</span>
+
+<span class="code-comment"># ترجمة مع الحفاظ على الأجزاء</span>
+result = translator.<span class="code-function">translate_parts</span>(<span class="code-string">"File 'config.json' not found"</span>)
+<span class="code-keyword">print</span>(result)  <span class="code-comment"># يحفظ 'config.json' مع ترجمة الباقي</span></code></pre>
+                </div>
+
+                <h3 class="subsection-title">2. CachedTranslator</h3>
+                <p class="content">مترجم يحفظ الترجمات في ملف بحيث ما يترجم نفس الشيء مرتين.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.translator <span class="code-keyword">import</span> CachedTranslator
+
+translator = <span class="code-function">CachedTranslator</span>(
+    target_language=<span class="code-string">'ar'</span>,
+    cache_file=<span class="code-string">'translation_cache.json'</span>,
+    max_cache_size=<span class="code-string">10000</span>
+)
+
+<span class="code-comment"># المكالمة الأولى: يترجم ويخزن مؤقتاً</span>
+result1 = translator.<span class="code-function">translate</span>(<span class="code-string">"Error"</span>)
+
+<span class="code-comment"># المكالمة الثانية: استرداد من ذاكرة التخزين المؤقت (فوري)</span>
+result2 = translator.<span class="code-function">translate</span>(<span class="code-string">"Error"</span>)
+
+<span class="code-comment"># الحصول على إحصائيات ذاكرة التخزين المؤقت</span>
+stats = translator.<span class="code-function">get_cache_stats</span>()
+<span class="code-keyword">print</span>(<span class="code-string">f"معدل إصابة ذاكرة التخزين المؤقت: {stats['hit_rate']}"</span>)</code></pre>
+                </div>
+
+                <h3 class="subsection-title">3. BatchTranslator</h3>
+                <p class="content">يترجم مجموعة أخطاء مرة وحدة بسرعة.</p>
+                
+                <div class="code-block">
+<pre><code><span class="code-keyword">from</span> PolyglotX.core.translator <span class="code-keyword">import</span> BatchTranslator
+
+translator = <span class="code-function">BatchTranslator</span>(
+    target_language=<span class="code-string">'ar'</span>,
+    batch_size=<span class="code-string">100</span>,
+    parallel=<span class="code-class">True</span>
+)
+
+errors = [
+    <span class="code-string">"TypeError: invalid type"</span>,
+    <span class="code-string">"ValueError: invalid value"</span>,
+    <span class="code-string">"NameError: name not defined"</span>,
+    <span class="code-comment"># ... مئات أكثر</span>
+]
+
+<span class="code-comment"># ترجمة الكل دفعة واحدة</span>
+translated = translator.<span class="code-function">translate_batch</span>(errors)
+
+<span class="code-comment"># دفعة تلقائية مع التحسين</span>
+translated = translator.<span class="code-function">auto_translate_batch</span>(errors)</code></pre>
+                </div>
+            </section>
+
+            <section id="languages" class="section">
+                <h2 class="section-title">اللغات المدعومة</h2>
+
+                <table>
+                    <tr>
+                        <th>اللغة</th>
+                        <th>الرمز</th>
+                        <th>الاسم الأصلي</th>
+                        <th>وحدة الاستيراد</th>
+                        <th>الاتجاه</th>
+                    </tr>
+                    <tr>
+                        <td>العربية</td>
+                        <td>ar</td>
+                        <td>العربية</td>
+                        <td>from PolyglotX import arbe</td>
+                        <td>RTL</td>
+                    </tr>
+                    <tr>
+                        <td>التركية</td>
+                        <td>tr</td>
+                        <td>Türkçe</td>
+                        <td>from PolyglotX import tr</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>اليابانية</td>
+                        <td>ja</td>
+                        <td>日本語</td>
+                        <td>from PolyglotX import ja</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>الصينية</td>
+                        <td>zh / zh-CN</td>
+                        <td>中文</td>
+                        <td>from PolyglotX import zh</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>الكردية</td>
+                        <td>ku</td>
+                        <td>کوردی</td>
+                        <td>from PolyglotX import ku</td>
+                        <td>RTL</td>
+                    </tr>
+                    <tr>
+                        <td>الإسبانية</td>
+                        <td>es</td>
+                        <td>Español</td>
+                        <td>from PolyglotX import es</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>الهندية</td>
+                        <td>hi</td>
+                        <td>हिन्दी</td>
+                        <td>from PolyglotX import hi</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>الفرنسية</td>
+                        <td>fr</td>
+                        <td>Français</td>
+                        <td>from PolyglotX import fr</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>الروسية</td>
+                        <td>ru</td>
+                        <td>Русский</td>
+                        <td>from PolyglotX import ru</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>الألمانية</td>
+                        <td>de</td>
+                        <td>Deutsch</td>
+                        <td>from PolyglotX import de</td>
+                        <td>LTR</td>
+                    </tr>
+                    <tr>
+                        <td>البرتغالية</td>
+                        <td>pt</td>
+                        <td>Português</td>
+                        <td>from PolyglotX import pt</td>
+                        <td>LTR</td>
+                    </tr>
+                </table>
+            </section>
+
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="logo" style="font-size: 32px; margin-bottom: 20px;">PolyglotX</div>
+                        <p style="margin-bottom: 20px;">مكتبة قوية لترجمة أخطاء بايثون</p>
+                        <p>الإصدار 1.0.0 - جاهز</p>
+                        <p style="margin-top: 30px;">من تطوير MERO</p>
+                        <p>تواصل: @QP4RM (تيليجرام)</p>
+                        <p style="margin-top: 20px;">رخصة MIT</p>
+                        <p style="margin-top: 30px; font-size: 14px; color: var(--primary);">MERO tele QP4RM</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            // Hide all language content
+            const allContent = document.querySelectorAll('.lang-content');
+            allContent.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Show selected language content
+            const selectedContent = document.getElementById('lang-' + lang);
+            if (selectedContent) {
+                selectedContent.classList.add('active');
+            }
+
+            // Update button states
+            const allButtons = document.querySelectorAll('.lang-btn');
+            allButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Handle RTL languages
+            const body = document.body;
+            const html = document.documentElement;
+            if (lang === 'ar' || lang === 'ku') {
+                body.classList.add('rtl');
+                html.setAttribute('dir', 'rtl');
+                html.setAttribute('lang', lang);
+            } else {
+                body.classList.remove('rtl');
+                html.setAttribute('dir', 'ltr');
+                html.setAttribute('lang', lang);
+            }
+
+            // Store preference in localStorage
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Load preferred language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const preferredLang = localStorage.getItem('preferred-language');
+            if (preferredLang) {
+                const langBtn = document.querySelector(`[onclick*="${preferredLang}"]`);
+                if (langBtn) {
+                    langBtn.click();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
