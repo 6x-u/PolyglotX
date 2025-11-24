@@ -1,6 +1,6 @@
 # PolyglotX
 
-![PolyglotX Banner](attached_assets/generated_images/premium_polyglotx_advertising_banner.png)
+![PolyglotX Banner](img/banner.png)
 
 **Advanced Multilingual Exception Handler for Python**
 
@@ -289,9 +289,6 @@ python test_real_errors.py
 - **11 Languages** - Fully supported
 - **400+ Methods** - Extensive API
 
-## Contributing
-
-Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
